@@ -56,5 +56,24 @@ namespace hw
             return $"{name} {author} {genre} {year}";
         }
 
+
+        public string showBooks()
+        {
+            string content = File.ReadAllText(model.fileName);
+
+            return content;
+     
+         
+        }
+
+
+        public void clearValues(TextBox txt1, TextBox txt2, TextBox txt3, TextBox txt4)
+        {
+            txt1.Clear();
+            txt2.Clear();
+            txt3.Clear();
+            txt4.Clear();
+        }
+
     }
 }

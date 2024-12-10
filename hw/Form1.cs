@@ -13,20 +13,20 @@ namespace hw
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string[] parts = textBox5.Text.Split(' ');
+            string name, author, genre, year;
 
+            name = textBox1.Text;
+            author = textBox2.Text;
+            genre = textBox3.Text;
+            year = textBox4.Text;
 
-            if (parts.Length == 4)
-            {
-                string name = parts[0];
-                string author = parts[1]; 
-                string genre = parts[2];   
-                string year = parts[3];
-                string result = controller.FormatBook(name, author, genre, year);
-                controller.Remove(result);
-            }
+            string result = controller.FormatBook(name, author, genre, year);
+            controller.Remove(result);
 
+            string books = controller.showBooks();
+            textBox5.Text = books;
 
+            controller.clearValues(textBox1, textBox2, textBox3, textBox4);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,6 +40,11 @@ namespace hw
 
             string result = controller.FormatBook(name, author, genre, year);
             controller.Add(result);
+
+            string books = controller.showBooks();
+            textBox5.Text = books;
+
+            controller.clearValues(textBox1, textBox2, textBox3, textBox4);
 
 
         }
