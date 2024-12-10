@@ -15,5 +15,21 @@ namespace hw
         {
             fileName = "books.txt";
         }
+
+        public void Save(string content)
+        {
+            File.WriteAllText(fileName, content, Encoding.UTF8);
+        }
+
+        public string[] Load()
+        {
+            return File.ReadAllLines(fileName);
+        }
+
+        public void SaveLines(string[] lines)
+        {
+            File.WriteAllLines(fileName, lines);
+        }
+
     }
 }

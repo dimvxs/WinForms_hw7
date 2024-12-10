@@ -20,7 +20,7 @@ namespace hw
 
             try
             {
-                File.WriteAllText(model.fileName, result, Encoding.UTF8);
+                model.Save(result);
                 MessageBox.Show("Текст был сохранён в файл.");
             }
             catch (Exception ex)
@@ -32,8 +32,8 @@ namespace hw
 
         public void Remove(string removeData)
         {
-            string[] lines = File.ReadAllLines(model.fileName);
-
+   
+            var lines = model.Load();
             var updatedLines = lines.Where(line => !line.Equals(removeData, StringComparison.OrdinalIgnoreCase)).ToArray();
 
 
@@ -41,7 +41,8 @@ namespace hw
             if (updatedLines.Length != lines.Length)
             {
                 // Перезаписываем файл без удалённой строки
-                File.WriteAllLines(model.fileName, updatedLines);
+
+                model.SaveLines(updatedLines);
 
                 MessageBox.Show("Строка удалена.");
             }
@@ -57,7 +58,7 @@ namespace hw
         }
 
 
-        public string showBooks()
+        public string ShowBooks()
         {
             string content = File.ReadAllText(model.fileName);
 
