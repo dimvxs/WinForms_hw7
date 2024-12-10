@@ -49,5 +49,32 @@ namespace hw
                 textBox.Clear();
             }
         }
+
+        private void âûõîäToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void äîáàâèòüÊíèãóToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string result = controller.FormatBook(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
+            controller.Add(result);
+        }
+
+        private void óäàëèòüÊíèãóToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string result = controller.FormatBook(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
+            controller.Remove(result);
+        }
+
+        private void óäàëèòüÂñåÊíèãèToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controller.RemoveAll();
+        }
+
+        private void ïîêàçàòüÏåğâóşÊíèãóToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controller.ShowFirst();
+        }
     }
 }

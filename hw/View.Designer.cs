@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(View));
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -39,6 +40,14 @@
             textBox3 = new TextBox();
             textBox4 = new TextBox();
             textBox5 = new TextBox();
+            menuStrip1 = new MenuStrip();
+            менюToolStripMenuItem = new ToolStripMenuItem();
+            добавитьКнигуToolStripMenuItem = new ToolStripMenuItem();
+            показатьПервуюКнигуToolStripMenuItem = new ToolStripMenuItem();
+            удалитьКнигуToolStripMenuItem = new ToolStripMenuItem();
+            удалитьВсеКнигиToolStripMenuItem = new ToolStripMenuItem();
+            выходToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -130,10 +139,66 @@
             textBox5.Location = new Point(496, 34);
             textBox5.Multiline = true;
             textBox5.Name = "textBox5";
+            textBox5.ReadOnly = true;
             textBox5.Size = new Size(292, 228);
             textBox5.TabIndex = 10;
             // 
-            // Form1
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { менюToolStripMenuItem, выходToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(800, 24);
+            menuStrip1.TabIndex = 11;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // менюToolStripMenuItem
+            // 
+            менюToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { добавитьКнигуToolStripMenuItem, показатьПервуюКнигуToolStripMenuItem, удалитьКнигуToolStripMenuItem, удалитьВсеКнигиToolStripMenuItem });
+            менюToolStripMenuItem.Name = "менюToolStripMenuItem";
+            менюToolStripMenuItem.Size = new Size(53, 20);
+            менюToolStripMenuItem.Text = "Меню";
+            // 
+            // добавитьКнигуToolStripMenuItem
+            // 
+            добавитьКнигуToolStripMenuItem.Image = (Image)resources.GetObject("добавитьКнигуToolStripMenuItem.Image");
+            добавитьКнигуToolStripMenuItem.Name = "добавитьКнигуToolStripMenuItem";
+            добавитьКнигуToolStripMenuItem.Size = new Size(203, 22);
+            добавитьКнигуToolStripMenuItem.Text = "Добавить книгу";
+            добавитьКнигуToolStripMenuItem.Click += добавитьКнигуToolStripMenuItem_Click;
+            // 
+            // показатьПервуюКнигуToolStripMenuItem
+            // 
+            показатьПервуюКнигуToolStripMenuItem.Image = (Image)resources.GetObject("показатьПервуюКнигуToolStripMenuItem.Image");
+            показатьПервуюКнигуToolStripMenuItem.Name = "показатьПервуюКнигуToolStripMenuItem";
+            показатьПервуюКнигуToolStripMenuItem.Size = new Size(203, 22);
+            показатьПервуюКнигуToolStripMenuItem.Text = "Показать первую книгу";
+            показатьПервуюКнигуToolStripMenuItem.Click += показатьПервуюКнигуToolStripMenuItem_Click;
+            // 
+            // удалитьКнигуToolStripMenuItem
+            // 
+            удалитьКнигуToolStripMenuItem.Image = (Image)resources.GetObject("удалитьКнигуToolStripMenuItem.Image");
+            удалитьКнигуToolStripMenuItem.Name = "удалитьКнигуToolStripMenuItem";
+            удалитьКнигуToolStripMenuItem.Size = new Size(203, 22);
+            удалитьКнигуToolStripMenuItem.Text = "Удалить книгу";
+            удалитьКнигуToolStripMenuItem.Click += удалитьКнигуToolStripMenuItem_Click;
+            // 
+            // удалитьВсеКнигиToolStripMenuItem
+            // 
+            удалитьВсеКнигиToolStripMenuItem.Image = (Image)resources.GetObject("удалитьВсеКнигиToolStripMenuItem.Image");
+            удалитьВсеКнигиToolStripMenuItem.Name = "удалитьВсеКнигиToolStripMenuItem";
+            удалитьВсеКнигиToolStripMenuItem.Size = new Size(203, 22);
+            удалитьВсеКнигиToolStripMenuItem.Text = "Удалить все книги";
+            удалитьВсеКнигиToolStripMenuItem.Click += удалитьВсеКнигиToolStripMenuItem_Click;
+            // 
+            // выходToolStripMenuItem
+            // 
+            выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+            выходToolStripMenuItem.Size = new Size(54, 20);
+            выходToolStripMenuItem.Text = "Выход";
+            выходToolStripMenuItem.Click += выходToolStripMenuItem_Click;
+            // 
+            // View
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -149,8 +214,13 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "Form1";
+            Controls.Add(menuStrip1);
+            Cursor = Cursors.Hand;
+            MainMenuStrip = menuStrip1;
+            Name = "View";
             Text = "Form1";
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -168,5 +238,12 @@
         private TextBox textBox3;
         private TextBox textBox4;
         private TextBox textBox5;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem менюToolStripMenuItem;
+        private ToolStripMenuItem добавитьКнигуToolStripMenuItem;
+        private ToolStripMenuItem показатьПервуюКнигуToolStripMenuItem;
+        private ToolStripMenuItem удалитьКнигуToolStripMenuItem;
+        private ToolStripMenuItem удалитьВсеКнигиToolStripMenuItem;
+        private ToolStripMenuItem выходToolStripMenuItem;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.DirectoryServices.ActiveDirectory;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -74,6 +75,33 @@ namespace hw
             txt2.Clear();
             txt3.Clear();
             txt4.Clear();
+        }
+
+        public void RemoveAll()
+        {
+            File.WriteAllText(model.fileName, string.Empty);
+
+
+            MessageBox.Show("все книги успешно удалены", "уведомление", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        public void ShowFirst()
+        {
+            try
+            {
+
+
+                var lines = model.Load();
+                var first = lines.First();
+
+            
+
+                MessageBox.Show(first, "первая книга");
+            }
+            catch 
+            {
+                MessageBox.Show("Файл пуст. Нет данных для отображения.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
     }
