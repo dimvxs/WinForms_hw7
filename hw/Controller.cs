@@ -22,11 +22,11 @@ namespace hw
             try
             {
                 model.Save(result);
-                MessageBox.Show("Текст был сохранён в файл.");
+                MessageBox.Show("Текст был сохранён в файл.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при сохранении: {ex.Message}");
+                MessageBox.Show($"Ошибка при сохранении: {ex.Message}", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -45,11 +45,11 @@ namespace hw
 
                 model.SaveLines(updatedLines);
 
-                MessageBox.Show("Строка удалена.");
+                MessageBox.Show("Строка удалена.", "Успешное действие", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Совпадений не найдено.");
+                MessageBox.Show("Совпадений не найдено.", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -82,7 +82,7 @@ namespace hw
             File.WriteAllText(model.fileName, string.Empty);
 
 
-            MessageBox.Show("все книги успешно удалены", "уведомление", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("все книги успешно удалены", "Уведомление", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public void ShowFirst()

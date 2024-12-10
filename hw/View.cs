@@ -15,7 +15,7 @@ namespace hw
         {
 
 
-            string result = controller.FormatBook(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
+            string result = controller.FormatBook(name.Text, author.Text, genre.Text, year.Text);
             controller.Remove(result);
 
             string books = controller.ShowBooks();
@@ -31,7 +31,7 @@ namespace hw
 
 
 
-            string result = controller.FormatBook(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
+            string result = controller.FormatBook(name.Text, author.Text, genre.Text, year.Text);
             controller.Add(result);
 
             string books = controller.ShowBooks();
@@ -44,35 +44,41 @@ namespace hw
 
         private void ClearTextBoxes()
         {
-            foreach (var textBox in new[] { textBox1, textBox2, textBox3, textBox4 })
+            foreach (var textBox in new[] { name, author, genre, year })
             {
                 textBox.Clear();
             }
         }
 
-        private void ‚˚ıÓ‰ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void ‰Ó·‡‚ËÚ¸ ÌË„ÛToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AddBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string result = controller.FormatBook(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
+            string result = controller.FormatBook(name.Text, author.Text, genre.Text, year.Text);
             controller.Add(result);
         }
 
-        private void Û‰‡ÎËÚ¸ ÌË„ÛToolStripMenuItem_Click(object sender, EventArgs e)
+        private void DeleteBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string result = controller.FormatBook(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
+            string result = controller.FormatBook(name.Text, author.Text, genre.Text, year.Text);
             controller.Remove(result);
+
+            string books = controller.ShowBooks();
+            textBox5.Text = books;
         }
 
-        private void Û‰‡ÎËÚ¸¬ÒÂ ÌË„ËToolStripMenuItem_Click(object sender, EventArgs e)
+        private void DeleteAllBooksToolStripMenuItem_Click(object sender, EventArgs e)
         {
             controller.RemoveAll();
+
+            string books = controller.ShowBooks();
+            textBox5.Text = books;
         }
 
-        private void ÔÓÍ‡Á‡Ú¸œÂ‚Û˛ ÌË„ÛToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ShowFirstBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
             controller.ShowFirst();
         }

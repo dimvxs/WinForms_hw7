@@ -35,17 +35,17 @@
             label4 = new Label();
             button1 = new Button();
             button2 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            name = new TextBox();
+            author = new TextBox();
+            genre = new TextBox();
+            year = new TextBox();
             textBox5 = new TextBox();
             menuStrip1 = new MenuStrip();
             менюToolStripMenuItem = new ToolStripMenuItem();
-            добавитьКнигуToolStripMenuItem = new ToolStripMenuItem();
-            показатьПервуюКнигуToolStripMenuItem = new ToolStripMenuItem();
-            удалитьКнигуToolStripMenuItem = new ToolStripMenuItem();
-            удалитьВсеКнигиToolStripMenuItem = new ToolStripMenuItem();
+            AddBookToolStripMenuItem = new ToolStripMenuItem();
+            ShowFirstBookToolStripMenuItem = new ToolStripMenuItem();
+            DeleteBookToolStripMenuItem = new ToolStripMenuItem();
+            DeleteAllBooksToolStripMenuItem = new ToolStripMenuItem();
             выходToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -106,33 +106,33 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // textBox1
+            // name
             // 
-            textBox1.Location = new Point(147, 34);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(185, 23);
-            textBox1.TabIndex = 6;
+            name.Location = new Point(147, 34);
+            name.Name = "name";
+            name.Size = new Size(185, 23);
+            name.TabIndex = 6;
             // 
-            // textBox2
+            // author
             // 
-            textBox2.Location = new Point(147, 74);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(185, 23);
-            textBox2.TabIndex = 7;
+            author.Location = new Point(147, 74);
+            author.Name = "author";
+            author.Size = new Size(185, 23);
+            author.TabIndex = 7;
             // 
-            // textBox3
+            // genre
             // 
-            textBox3.Location = new Point(147, 114);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(185, 23);
-            textBox3.TabIndex = 8;
+            genre.Location = new Point(147, 114);
+            genre.Name = "genre";
+            genre.Size = new Size(185, 23);
+            genre.TabIndex = 8;
             // 
-            // textBox4
+            // year
             // 
-            textBox4.Location = new Point(147, 156);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(81, 23);
-            textBox4.TabIndex = 9;
+            year.Location = new Point(147, 156);
+            year.Name = "year";
+            year.Size = new Size(81, 23);
+            year.TabIndex = 9;
             // 
             // textBox5
             // 
@@ -154,49 +154,49 @@
             // 
             // менюToolStripMenuItem
             // 
-            менюToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { добавитьКнигуToolStripMenuItem, показатьПервуюКнигуToolStripMenuItem, удалитьКнигуToolStripMenuItem, удалитьВсеКнигиToolStripMenuItem });
+            менюToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { AddBookToolStripMenuItem, ShowFirstBookToolStripMenuItem, DeleteBookToolStripMenuItem, DeleteAllBooksToolStripMenuItem });
             менюToolStripMenuItem.Name = "менюToolStripMenuItem";
             менюToolStripMenuItem.Size = new Size(53, 20);
             менюToolStripMenuItem.Text = "Меню";
             // 
-            // добавитьКнигуToolStripMenuItem
+            // AddBookToolStripMenuItem
             // 
-            добавитьКнигуToolStripMenuItem.Image = (Image)resources.GetObject("добавитьКнигуToolStripMenuItem.Image");
-            добавитьКнигуToolStripMenuItem.Name = "добавитьКнигуToolStripMenuItem";
-            добавитьКнигуToolStripMenuItem.Size = new Size(203, 22);
-            добавитьКнигуToolStripMenuItem.Text = "Добавить книгу";
-            добавитьКнигуToolStripMenuItem.Click += добавитьКнигуToolStripMenuItem_Click;
+            AddBookToolStripMenuItem.Image = (Image)resources.GetObject("AddBookToolStripMenuItem.Image");
+            AddBookToolStripMenuItem.Name = "AddBookToolStripMenuItem";
+            AddBookToolStripMenuItem.Size = new Size(203, 22);
+            AddBookToolStripMenuItem.Text = "Добавить книгу";
+            AddBookToolStripMenuItem.Click += AddBookToolStripMenuItem_Click;
             // 
-            // показатьПервуюКнигуToolStripMenuItem
+            // ShowFirstBookToolStripMenuItem
             // 
-            показатьПервуюКнигуToolStripMenuItem.Image = (Image)resources.GetObject("показатьПервуюКнигуToolStripMenuItem.Image");
-            показатьПервуюКнигуToolStripMenuItem.Name = "показатьПервуюКнигуToolStripMenuItem";
-            показатьПервуюКнигуToolStripMenuItem.Size = new Size(203, 22);
-            показатьПервуюКнигуToolStripMenuItem.Text = "Показать первую книгу";
-            показатьПервуюКнигуToolStripMenuItem.Click += показатьПервуюКнигуToolStripMenuItem_Click;
+            ShowFirstBookToolStripMenuItem.Image = (Image)resources.GetObject("ShowFirstBookToolStripMenuItem.Image");
+            ShowFirstBookToolStripMenuItem.Name = "ShowFirstBookToolStripMenuItem";
+            ShowFirstBookToolStripMenuItem.Size = new Size(203, 22);
+            ShowFirstBookToolStripMenuItem.Text = "Показать первую книгу";
+            ShowFirstBookToolStripMenuItem.Click += ShowFirstBookToolStripMenuItem_Click;
             // 
-            // удалитьКнигуToolStripMenuItem
+            // DeleteBookToolStripMenuItem
             // 
-            удалитьКнигуToolStripMenuItem.Image = (Image)resources.GetObject("удалитьКнигуToolStripMenuItem.Image");
-            удалитьКнигуToolStripMenuItem.Name = "удалитьКнигуToolStripMenuItem";
-            удалитьКнигуToolStripMenuItem.Size = new Size(203, 22);
-            удалитьКнигуToolStripMenuItem.Text = "Удалить книгу";
-            удалитьКнигуToolStripMenuItem.Click += удалитьКнигуToolStripMenuItem_Click;
+            DeleteBookToolStripMenuItem.Image = (Image)resources.GetObject("DeleteBookToolStripMenuItem.Image");
+            DeleteBookToolStripMenuItem.Name = "DeleteBookToolStripMenuItem";
+            DeleteBookToolStripMenuItem.Size = new Size(203, 22);
+            DeleteBookToolStripMenuItem.Text = "Удалить книгу";
+            DeleteBookToolStripMenuItem.Click += DeleteBookToolStripMenuItem_Click;
             // 
-            // удалитьВсеКнигиToolStripMenuItem
+            // DeleteAllBooksToolStripMenuItem
             // 
-            удалитьВсеКнигиToolStripMenuItem.Image = (Image)resources.GetObject("удалитьВсеКнигиToolStripMenuItem.Image");
-            удалитьВсеКнигиToolStripMenuItem.Name = "удалитьВсеКнигиToolStripMenuItem";
-            удалитьВсеКнигиToolStripMenuItem.Size = new Size(203, 22);
-            удалитьВсеКнигиToolStripMenuItem.Text = "Удалить все книги";
-            удалитьВсеКнигиToolStripMenuItem.Click += удалитьВсеКнигиToolStripMenuItem_Click;
+            DeleteAllBooksToolStripMenuItem.Image = (Image)resources.GetObject("DeleteAllBooksToolStripMenuItem.Image");
+            DeleteAllBooksToolStripMenuItem.Name = "DeleteAllBooksToolStripMenuItem";
+            DeleteAllBooksToolStripMenuItem.Size = new Size(203, 22);
+            DeleteAllBooksToolStripMenuItem.Text = "Удалить все книги";
+            DeleteAllBooksToolStripMenuItem.Click += DeleteAllBooksToolStripMenuItem_Click;
             // 
             // выходToolStripMenuItem
             // 
             выходToolStripMenuItem.Name = "выходToolStripMenuItem";
             выходToolStripMenuItem.Size = new Size(54, 20);
             выходToolStripMenuItem.Text = "Выход";
-            выходToolStripMenuItem.Click += выходToolStripMenuItem_Click;
+            выходToolStripMenuItem.Click += ExitToolStripMenuItem_Click;
             // 
             // View
             // 
@@ -204,10 +204,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(year);
+            Controls.Add(genre);
+            Controls.Add(author);
+            Controls.Add(name);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label4);
@@ -233,17 +233,17 @@
         private Label label4;
         private Button button1;
         private Button button2;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox name;
+        private TextBox author;
+        private TextBox genre;
+        private TextBox year;
         private TextBox textBox5;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem менюToolStripMenuItem;
-        private ToolStripMenuItem добавитьКнигуToolStripMenuItem;
-        private ToolStripMenuItem показатьПервуюКнигуToolStripMenuItem;
-        private ToolStripMenuItem удалитьКнигуToolStripMenuItem;
-        private ToolStripMenuItem удалитьВсеКнигиToolStripMenuItem;
+        private ToolStripMenuItem AddBookToolStripMenuItem;
+        private ToolStripMenuItem ShowFirstBookToolStripMenuItem;
+        private ToolStripMenuItem DeleteBookToolStripMenuItem;
+        private ToolStripMenuItem DeleteAllBooksToolStripMenuItem;
         private ToolStripMenuItem выходToolStripMenuItem;
     }
 }
